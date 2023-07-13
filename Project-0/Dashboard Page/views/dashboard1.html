@@ -1,0 +1,127 @@
+<link rel="stylesheet" href="./dashboard.css" />
+
+
+   <!-- NAV bar of DashBoard  -->
+<nav class="header">
+  <a ng-href="#!dashboard"><img src="./movie.png" alt="Logo" /></a>
+
+  <div>
+    <a class="a" ng-href="#!upcoming">Upcoming </a>
+    <a class="a" ng-href="#!toprated">Top Rated</a>
+    <a class="a" ng-href="#!popular">Popular</a>
+    <a class="a" ng-href="#!nowplaying">Now Playing</a>
+    <a class="a" ng-href="#!favorite">Favorite</a>
+  </div>
+
+  <a
+    style="color: rgb(234, 231, 231); margin-top: 10px; margin-right: 10px"
+    ng-href="#!login"
+    >Logout</a
+  >
+</nav>
+
+
+
+  <!-- Banner Image on Dashboard  -->
+  <div class="banner"></div>
+
+
+
+
+  <!-- NOW PLAYING Section  -->
+
+  <a ng-href="#!/nowplaying"><h2>Now Playing</h2></a>
+  <div ng-controller="nowPlayingCtrl">
+    <div class="row">
+      <div class="movies">
+        <div class="card" ng-repeat="image in movies | orderBy:'-vote_average'">
+          <a ng-href="#!/nowplaying"
+            > <p style="color: white; margin-left: 7px;">Rating :{{image.vote_average}}</p>
+            <img
+              class="carding"
+              ng-src="https://image.tmdb.org/t/p/original/{{image.poster_path}}"
+              alt="{{image.title}}"
+          />
+         </a>
+        </div>
+      </div>
+    </div>
+    <p style="color: white;">{{image.vote_average}}</p>
+
+  </div>
+
+
+
+
+
+
+  <!-- POPULAR Section -->
+  <a href="#!/popular"><h2>Popular</h2></a>
+  <div ng-controller="popularCtrl">
+    <div class="row">
+      <div class="movies">
+        <div class="card" ng-repeat="image in movies | orderBy:'-vote_average'" >
+          <a ng-href="#!/popular"
+            ><p style="color: white; margin-left: 7px;">Rating :{{image.vote_average}}</p>
+            <img
+              class="carding"
+              ng-src="https://image.tmdb.org/t/p/original/{{image.poster_path}}"
+              alt="{{image.title}}"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- TOP-RATED Section -->
+  <a href="#!/toprated"><h2>Top-Rated</h2></a>
+  <div ng-controller="topRatedCtrl">
+    <div class="row">
+      <div class="movies">
+        <div class="card" ng-repeat="image in movies | orderBy:'-vote_average'">
+          <a ng-href="#!/toprated"
+            > <p style="color: white; margin-left: 7px;">Rating :{{image.vote_average}}</p>
+            <img
+              class="carding"
+              ng-src="https://image.tmdb.org/t/p/original/{{image.poster_path}}"
+              alt="{{image.title}}"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  <!-- UPCOMING Section -->
+  <a href="#!/upcoming"> <h2>Upcoming</h2></a>
+  <div ng-controller="upcomingCtrl">
+    <div class="row">
+      <div class="movies">
+        <div class="card" ng-repeat="image in movies | orderBy:'-vote_average'">
+          <a ng-href="#!/upcoming"> <p style="color: white; margin-left: 7px;">Rating :{{image.vote_average}}</p>
+            <img
+              class="carding"
+              ng-src="https://image.tmdb.org/t/p/original/{{image.poster_path}}"
+              alt="{{image.title}}"
+          /></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="genrebox" ng-repeat="genre in genres">hello</div>
+
+
+
+  <!-- FOOTER Section -->
+  <footer class="footer">
+    <p>&copy; 2023 TMDB API . All rights reserved.</p>
+  </footer>
+

@@ -1,0 +1,45 @@
+{
+  "favorite": [
+    {
+      "adult": false,
+      "backdrop_path": "/vI3aUGTuRRdM7J78KIdW98LdxE5.jpg",
+      "genre_ids": [
+        35,
+        18,
+        10749
+      ],
+      "id": 19404,
+      "original_language": "hi",
+      "original_title": "दिलवाले दुल्हनिया ले जायेंगे",
+      "overview": "Raj is a rich, carefree, happy-go-lucky second generation NRI. Simran is the daughter of Chaudhary Baldev Singh, who in spite of being an NRI is very strict about adherence to Indian values. Simran has left for India to be married to her childhood fiancé. Raj leaves for India with a mission at his hands, to claim his lady love under the noses of her whole family. Thus begins a saga.",
+      "popularity": 38.611,
+      "poster_path": "/ktejodbcdCPXbMMdnpI9BUxW6O8.jpg",
+      "release_date": "1995-10-20",
+      "title": "Dilwale Dulhania Le Jayenge",
+      "video": false,
+      "vote_average": 8.6,
+      "vote_count": 4163
+    },
+    {
+      "adult": false,
+      "backdrop_path": "/3Rfvhy1Nl6sSGJwyjb0QiZzZYlB.jpg",
+      "genre_ids": [
+        16,
+        12,
+        10751,
+        35
+      ],
+      "id": 862,
+      "original_language": "en",
+      "original_title": "Toy Story",
+      "overview": "Led by Woody, Andy's toys live happily in his room until Andy's birthday brings Buzz Lightyear onto the scene. Afraid of losing his place in Andy's heart, Woody plots against Buzz. But when circumstances separate Buzz and Woody from their owner, the duo eventually learns to put aside their differences.",
+      "popularity": 105.984,
+      "poster_path": "/uXDfjJbdP4ijW5hWSBrPrlKpxab.jpg",
+      "release_date": "1995-10-30",
+      "title": "Toy Story",
+      "video": false,
+      "vote_average": 8,
+      "vote_count": 16865
+    }
+  ]
+}

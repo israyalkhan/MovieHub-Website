@@ -1,0 +1,139 @@
+
+
+<nav class="header">
+  <a ng-href="#!dashboard"><img src="./movie.png" alt="Logo" /></a>
+
+  <div>
+    <a class="a" ng-href="#!upcoming">Upcoming </a>
+    <a class="a" ng-href="#!toprated">Top Rated</a>
+    <a class="a" ng-href="#!popular">Popular</a>
+    <a class="a" ng-href="#!nowplaying">Now Playing</a>
+    <a class="a" ng-href="#!favorite">Favorite</a>
+  </div>
+
+  <a style="color: rgb(234, 231, 231)" ng-href="#!login">Logout</a>
+</nav>
+
+<div
+  class="row"
+  ng-controller="nowPlayingCtrl"
+  style="background-color: rgb(0, 0, 0); margin: 20px"
+>
+  <button class="sort" ng-click="sort()">Movies Sorted by Rating</button>
+  <div
+    class="card my-4 mx-2 mb-3"
+    style="
+      width: 384px;
+      padding-top: 10px;
+      background-color: black;
+      border: solid rgb(192, 181, 181);
+    "
+    ng-repeat="movie in movies | orderBy:'-vote_average'"
+  >
+    <img
+      ng-src="https://image.tmdb.org/t/p/original/{{movie.poster_path}}"
+      class="card-img-top"
+      alt="{{movie.title}}"
+      style="height: 380px"
+    />
+
+    <div class="card-body" style="color: white">
+      <h4 class="card-title">-{{movie.title}}</h4>
+      <p>Language: English</p>
+      <p>Release Date:{{movie.release_date}}</p>
+      <p class="overview">{{movie.overview}}</p>
+      <p>Rating: {{movie.vote_average}}</p>
+
+      <button class="addFav" ng-click="addNowPlaying(movie)">Fav.</button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
+     <!-- CSS of NowPlaying  -->
+<link
+  href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+  rel="stylesheet"
+  integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+  crossorigin="anonymous"
+/>
+
+<style>
+  * {
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+  }
+
+  .header {
+    height: 70px;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+    justify-content: space-between;
+  }
+
+  img {
+    height: 100%;
+  }
+
+  div {
+    width: 100%;
+  }
+
+  a {
+    height: 100%;
+  }
+
+  .a {
+    margin: 2vmax;
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+  }
+
+
+  .card-title {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  .overview {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 4;
+    -webkit-box-orient: vertical;
+  }
+
+  .addFav {
+    font-size: 20px;
+    font-family: sans-serif;
+    border: none;
+    border-radius: 3px;
+    width: 65px;
+    height: 33px;
+    transition: transform 0.5s;
+    &:hover {
+      background-color: rgb(109, 101, 101);
+    }
+  }
+
+  .sort {
+    background-color: black;
+    color: white;
+    border: none;
+  }
+</style>

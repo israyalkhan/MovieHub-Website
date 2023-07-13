@@ -1,0 +1,6 @@
+for logIn signUp 
+json-server --watch db.json --port 3000
+
+for favorite data 
+json-server --watch favorite.json --port 3001
+
